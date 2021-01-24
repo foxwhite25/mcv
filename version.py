@@ -33,12 +33,12 @@ def get_date(v):
         try:
             a = time.mktime(datetime.datetime.strptime(date[0], s).timetuple())
             return a
-        except :
+        except:
             date = html.xpath('//*[@class="infobox-rows"]/tbody/tr[2]/td/p/text()')
             try:
                 a = time.mktime(datetime.datetime.strptime(date[0], s).timetuple())
                 return a
-            except :
+            except:
                 try:
                     a = time.mktime(datetime.datetime.strptime(date[0], s2).timetuple())
                     return a
